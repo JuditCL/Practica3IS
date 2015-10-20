@@ -1,13 +1,11 @@
 package practica3;
 
-import java.awt.Container;
 import java.awt.Dimension;
 import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.ApplicationFrame;
 
@@ -26,7 +24,7 @@ public class HistogramDisplay extends ApplicationFrame{
     }
     
     private JFreeChart createChart(DefaultCategoryDataset dataSet){
-        JFreeChart chart = ChartFactory.createBarChart("Histogram", "Domains", "N emails", dataSet, PlotOrientation.VERTICAL, false, false, false);
+        JFreeChart chart = ChartFactory.createBarChart("Histogram", "Domains", "N emails", dataSet, PlotOrientation.VERTICAL, true, false, false);
         return chart;
     }
     private DefaultCategoryDataset createDataset(){
